@@ -11,4 +11,4 @@ class DevelopmentConfig(BaseConfig):
 	if not SECRET_KEY:
 		SECRET_KEY=os.urandom(64)
 	# SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URI') or 'sqlite:///' + os.path.join(basedir, 'app.db')
-	SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URI') or 'postgresql://postgres:meliodas@localhost:5432/libraryDB'
+	SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URI') or 'postgresql://postgres:meliodas@localhost:5432/librarydb'

@@ -72,7 +72,7 @@ class User:
     def get_issued_books_by_user(cls, user_id):
         trans_db: transactionDB = transactionDB.get_all({"user_id": user_id})
         if trans_db:
-            return [trans.book_id for trans in trans_db]
+            return [trans.transaction_id for trans in trans_db]
         return None
 
     @classmethod
