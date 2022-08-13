@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=meliodas
+      - POSTGRES_DB=librarydb
+    ports:
+      - "5002:5432"
+    restart: always
+  
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+    restart: always
+    command: ["bash", "start_app.sh"]
