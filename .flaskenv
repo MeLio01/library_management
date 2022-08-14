@@ -1,0 +1,4 @@
+FLASK_APP=manage.py
+ENVIRONMENT=development
+APP_SETTINGS=config.DevelopmentConfig
+AUTH_PASSWORD=test
